@@ -10,13 +10,16 @@ export default class App extends Component {
       term: '',
       items: []
     };
+
+    this.onChange=this.onChange.bind(this);
+    this.onSubmit=this.onSubmit.bind(this);
   }
  
-  onChange = (event) => {
+  onChange (event) {
     this.setState({ term: event.target.value });
   }
  
-  onSubmit = (event) => {
+  onSubmit (event) {
     event.preventDefault();
     this.setState({
       term: '',
